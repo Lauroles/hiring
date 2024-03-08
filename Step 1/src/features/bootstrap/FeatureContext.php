@@ -74,7 +74,7 @@ class FeatureContext implements Context
 
     /**
      * @Then this vehicle should be part of my vehicle fleet
-     */
+    */
     public function thisVehicleShouldBePartOfMyVehicleFleet()
     {
         if (!$this->fleet->isVehicleInFleet($this->vehicle)) {
@@ -122,7 +122,7 @@ class FeatureContext implements Context
 
     /**
      * @Given I have a location with latitude :lat and longitude :lng
-     */
+    */
     public function iHaveALocationWithLatitudeAndLongitude($lat, $lng)
     {
         $this->location = new Location($lat, $lng);
@@ -130,7 +130,7 @@ class FeatureContext implements Context
 
     /**
      * @When I park my vehicle at this location
-     */
+    */
     public function iParkMyVehicleAtThisLocation()
     {
         try {
@@ -144,7 +144,7 @@ class FeatureContext implements Context
 
     /**
      * @Then the known location of my vehicle should verify this location
-     */
+    */
     public function theKnownLocationOfMyVehicleShouldVerifyThisLocation()
     {
         $vehicleLocation = $this->vehicle->getLocation();
@@ -159,7 +159,7 @@ class FeatureContext implements Context
 
     /**
      * @Given my vehicle has been parked into this location
-     */
+    */
     public function myVehicleHasBeenParkedIntoThisLocation()
     {
         $this->iParkMyVehicleAtThisLocation();
@@ -167,7 +167,7 @@ class FeatureContext implements Context
 
     /**
      * @When I try to park my vehicle at this location again
-     */
+    */
     public function iTryToParkMyVehicleAtThisLocationAgain()
     {
         try {
@@ -181,7 +181,7 @@ class FeatureContext implements Context
 
     /**
      * @Then I should be informed that my vehicle is already parked at this location
-     */
+    */
     public function iShouldBeInformedThatMyVehicleIsAlreadyParkedAtThisLocation()
     {
         if ($this->response !== "Vehicle is already parked at this location.") {
@@ -191,7 +191,7 @@ class FeatureContext implements Context
 
     /**
      * @Given another user has a fleet
-     */
+    */
     public function anotherUserHasAFleet()
     {
         $this->otherUserFleet = new Fleet(uniqid());
@@ -205,7 +205,7 @@ class FeatureContext implements Context
 
     /**
      * @Given this vehicle has been registered into the other user's fleet
-     */
+    */
     public function thisVehicleHasBeenRegisteredIntoTheOtherUsersFleet()
     {
         if (!$this->otherUserFleet->isVehicleInFleet($this->vehicle)) {
