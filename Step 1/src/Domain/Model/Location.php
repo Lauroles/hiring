@@ -10,7 +10,6 @@ class Location {
         $this->longitude = $longitude;
     }
 
-    // Getters
     public function getLatitude() {
         return $this->latitude;
     }

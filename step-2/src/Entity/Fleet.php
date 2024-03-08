@@ -52,7 +52,6 @@ class Fleet
     public function removeVehicle(Vehicle $vehicle): static
     {
         if ($this->vehicles->removeElement($vehicle)) {
-            // set the owning side to null (unless already changed)
             if ($vehicle->getFleet() === $this) {
                 $vehicle->setFleet(null);
             }

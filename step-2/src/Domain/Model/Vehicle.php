@@ -12,7 +12,6 @@ class Vehicle {
         $this->location = null;
     }
 
-    // Getters
     public function getId() {
         return $this->id;
     }
