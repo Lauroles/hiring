@@ -54,9 +54,9 @@ Using Commands
 
 This is the different command :
 
-Create Fleet: php bin/console fleet:create <userId>
-Register Vehicle: php bin/console fleet:register-vehicle <fleetId> <vehiclePlateNumber>
-Localize Vehicle: php bin/console fleet:localize-vehicle <fleetId> <vehiclePlateNumber> <lat> <lng> [<alt>]
-
+Create Fleet: php bin/console fleet:create < userId >
+Register Vehicle: php bin/console fleet:register-vehicle < fleetId > < vehiclePlateNumber >
+Localize Vehicle: php bin/console fleet:localize-vehicle < fleetId > < vehiclePlateNumber > < lat > < lng > [< alt >]
+ 
 Ensure to replace placeholders <...> with actual values.
 
